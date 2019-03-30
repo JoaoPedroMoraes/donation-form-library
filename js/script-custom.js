@@ -1,3 +1,9 @@
+function rmChild(index){
+    var a  = document.getElementById('formulario');
+    var b = document.getElementById('form-' + index);
+    a.removeChild(b);
+}
+
 function formFields (size,icon_name, id, mark, example_text){//size,icon_name, id, label, example_text
     var field = document.createElement('div');
     field.className = "input-field col " + size; //size
@@ -28,10 +34,11 @@ function formFields (size,icon_name, id, mark, example_text){//size,icon_name, i
     return field;
 }
 
-function completeForm(){
+function completeForm(x){
     var row = document.createElement('div');
     row.className = 'row';
-    document.body.appendChild(row);
+    row.id = 'form-' + x;
+    document.getElementById('formulario').appendChild(row);
 
     var col = document.createElement('div');
     col.className = 'col s12 m8 offset-m2';
@@ -57,5 +64,9 @@ function completeForm(){
     var button = document.createElement('a')
     button.className = 'waves-effect waves-light btn-large red';
     button.innerText = 'Excluir';
+    button.setAttribute('onclick','rmChild(' + x + ');');
+
     card.appendChild(button);
 }
+
+ var x = 0;

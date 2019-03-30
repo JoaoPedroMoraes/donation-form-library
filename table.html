@@ -20,19 +20,44 @@
 </head>
 
 <body>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper purple darken-3">
+        <a href="#!" class="brand-logo center">BC</a>
+      </div>
+      <div class="nav-content">
+        <!-- <span class="nav-title">Title</span> -->
+        <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" onclick="
+            completeForm(x);
+            x ++;
+            M.toast({html: 'Item adicionado!'});
+            ">
+          <i class="material-icons">add</i>
+        </a>
+      </div>
+    </nav>
+  </div>
+
   <div id="formulario"></div>
 
-  <div class="fixed-action-btn">
+  <!-- <div class="fixed-action-btn">
       <a 
       class="btn-floating btn-large pulse waves-effect waves-light blue" 
       onclick="
         completeForm(x);
         x ++;
-        M.toast({html: '1 item adicionado!'});
+        M.toast({html: 'Item adicionado!'});
         "
       ><i class="material-icons">add</i></a>
-  </div> 
+  </div>  -->
 
+  <div class="fixed-action-btn">
+      <a 
+      class="btn-floating btn-large pulse waves-effect waves-light blue"
+      href="index.html"
+      ><i class="material-icons">send</i></a>
+  </div> 
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>

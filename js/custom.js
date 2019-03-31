@@ -35,7 +35,7 @@ function formFields (index, size,icon_name, id, mark, example_text){//size,icon_
     return field;
 }
 
-function completeForm(index){
+function addForm(index){
     var row = document.createElement('div');
     row.className = 'row';
     row.id = 'form-' + index;
@@ -54,13 +54,13 @@ function completeForm(index){
 
     card.appendChild(form);
 
-    form.appendChild(formFields(index,'s6 m3 l1','plus_one','quantidade','Quantidade','ex. 1'));
-    form.appendChild(formFields(index,'s12 m9 l2','account_circle','autor','Autor','ex: Antoine de Saint-Exupéry'));
-    form.appendChild(formFields(index,'s12 m12 l3','title','titulo','Título','O Pequeno Príncipe'));
-    form.appendChild(formFields(index,'s12 m3 l1','import_contacts','edicao','Edição','ex. 1ª'));
-    form.appendChild(formFields(index,'s6 m3 l1','date_range','ano','Ano','ex: 1945'));
-    form.appendChild(formFields(index,'s12 m6 l2','domain','editora','Editora','ex: Editora Agir'));
-    form.appendChild(formFields(index,'s12 m12 l2','place','local','Local','ex: Editora Agir'));
+    form.appendChild(formFields(index,'s6 m3 xl1','plus_one','quantidade','Quantidade','ex. 1'));
+    form.appendChild(formFields(index,'s12 m9 xl2','account_circle','autor','Autor','ex: Antoine de Saint-Exupéry'));
+    form.appendChild(formFields(index,'s12 m12 xl3','title','titulo','Título','O Pequeno Príncipe'));
+    form.appendChild(formFields(index,'s12 m3 xl1','import_contacts','edicao','Edição','ex. 1ª'));
+    form.appendChild(formFields(index,'s6 m3 xl1','date_range','ano','Ano','ex: 1945'));
+    form.appendChild(formFields(index,'s12 m6 xl2','domain','editora','Editora','ex: Editora Cultura'));
+    form.appendChild(formFields(index,'s12 m12 xl2','place','local','Local','ex: Brasil'));
 
     var button = document.createElement('a')
     button.className = 'waves-effect waves-light btn-large red';
@@ -70,4 +70,4 @@ function completeForm(index){
     card.appendChild(button);
 }
 
- var x = 0;
+ var count = 0;

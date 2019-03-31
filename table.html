@@ -13,7 +13,7 @@
 
   <link type="text/css" rel="stylesheet" href="css/custom.css">
 
-  <script type="text/javascript" src="js/script-custom.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
 
   <title>Doação BC</title>
 
@@ -24,13 +24,14 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper purple darken-3">
+        <!-- <img src="midia/logo-bc.png" class="logo-small"> -->
         <a href="#!" class="brand-logo center">BC</a>
       </div>
       <div class="nav-content">
         <!-- <span class="nav-title">Title</span> -->
         <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" onclick="
-            completeForm(x);
-            x ++;
+            addForm(count);
+            count ++;
             M.toast({html: 'Item adicionado!'});
             ">
           <i class="material-icons">add</i>
@@ -45,8 +46,8 @@
       <a 
       class="btn-floating btn-large pulse waves-effect waves-light blue" 
       onclick="
-        completeForm(x);
-        x ++;
+        addForm(count);
+        count ++;
         M.toast({html: 'Item adicionado!'});
         "
       ><i class="material-icons">add</i></a>

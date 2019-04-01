@@ -42,14 +42,23 @@ function addForm(index){
 
     var col = document.createElement('div');
     col.className = 'collapsible-header';
-    col.innerHTML = 'click aqui para adicionar informações';
     row.appendChild(col);
 
     var icon = document.createElement('i');
     icon.className = 'material-icons';
-    icon.setAttribute('onclick','rmChild(' + index + ' ); M.toast({html: "Item removido!"});');
-    icon.innerHTML = 'remove_circle_outline';
+    icon.innerHTML = 'expand_more';
     col.appendChild(icon);
+
+    var text = document.createElement('a');
+    text.className = 'btn-flat';
+    text.innerHTML = 'Titulo '+index;
+    col.appendChild(text);
+
+    var button = document.createElement('a');
+    button.className = 'waves-effect waves-light btn-small red';
+    button.setAttribute('onclick','rmChild(' + index + ' ); M.toast({html: "Item removido!"});');
+    button.innerHTML = 'excluir';
+    col.appendChild(button);
 
     var form = document.createElement('div');
     form.className = 'collapsible-body white row';
@@ -67,4 +76,4 @@ function addForm(index){
     span.appendChild(formFields(index,'s12 m12 xl2','place','local','Local','ex: Brasil'));
 }
 
- var count = 0;
+ var count = 1;

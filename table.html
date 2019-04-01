@@ -15,6 +15,22 @@
 
   <script type="text/javascript" src="js/custom.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+  <script>
+
+    $(document).ready(function () {
+      $('.collapsible').collapsible();
+    });
+
+    $(document).ready(function () {
+      $('.modal').modal();
+      $('#modal-help').trigger('click');
+    });
+
+  </script>
+
   <title>Doação BC</title>
 
 </head>
@@ -24,41 +40,51 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper purple darken-3">
-        <!-- <img src="midia/logo-bc.png" class="logo-small"> -->
         <a href="#!" class="brand-logo center">BC</a>
-      </div>
-      <div class="nav-content">
-        <!-- <span class="nav-title">Title</span> -->
-        <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal" onclick="
-            addForm(count);
-            count ++;
-            M.toast({html: 'Item adicionado!'});
-            ">
-          <i class="material-icons">add</i>
-        </a>
+        <ul class="left hide-on-med-and-down">
+          <li>
+            <a><i class="material-icons modal-trigger" id="modal-help" href="#modal1">help</i></a>
+          </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class="waves-effect waves-light btn green darken-2" href="index.html">Enviar<i class="material-icons right">send</i></a>
+          </li>
+        </ul>
+
       </div>
     </nav>
   </div>
 
-  <div id="formulario"></div>
 
-  <!-- <div class="fixed-action-btn">
-      <a 
-      class="btn-floating btn-large pulse waves-effect waves-light blue" 
-      onclick="
-        addForm(count);
-        count ++;
-        M.toast({html: 'Item adicionado!'});
-        "
-      ><i class="material-icons">add</i></a>
-  </div>  -->
+  <!-- Modal Trigger -->
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4 class="center">Formulário de Doação de Material Bibliográfico</h4>
+      <p class="justify">Preencha o formulário a seguir para submeter os títulos que você deseja doar para a biblioteca. É importante
+        que todos os dados informados estejam corretos, bem como a impressão e entrega do termo de doação assinada,
+        disponível neste link.</p>
+      <p>Para começar, click no botão "+" para adicionar um livro à lista.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+    </div>
+  </div>
+
+
+  <ul id="formulario" class="collapsible popout"></ul>
 
   <div class="fixed-action-btn">
-      <a 
-      class="btn-floating btn-large pulse waves-effect waves-light blue"
-      href="index.html"
-      ><i class="material-icons">send</i></a>
-  </div> 
+    <a class="btn-floating btn-large pulse waves-effect waves-light blue darken-4" onclick="
+    addForm(count);
+    count ++;
+    M.toast({html: 'Item adicionado!'});
+    ">
+  <i class="material-icons">add</i>
+</a>
+  </div>
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>

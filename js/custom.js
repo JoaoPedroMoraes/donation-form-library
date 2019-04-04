@@ -1,9 +1,7 @@
 function confirmar_exclusao(index) {
-
     msg = "Tem certeza que deseja excluir este item?";
     if (confirm(msg)) {
         rmChild(index);
-        M.toast({ html: "Item removido!" });
     }
 }
 
@@ -11,6 +9,7 @@ function rmChild(index) {
     var a = document.getElementById('formulario');
     var b = document.getElementById('form-' + index);
     a.removeChild(b);
+    M.toast({ html: "Item removido!" });
 }
 
 function formFields(index, size, icon_name, id, mark, example_text) {//size,icon_name, id, label, example_text

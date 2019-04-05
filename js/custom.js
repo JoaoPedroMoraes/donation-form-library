@@ -53,7 +53,7 @@ function addForm(index) {
     row.appendChild(col);
 
     var icon = document.createElement('i');
-    icon.className = 'material-icons';
+    icon.className = 'material-icons left';
     icon.innerHTML = 'expand_more';
     col.appendChild(icon);
 
@@ -63,13 +63,13 @@ function addForm(index) {
     col.appendChild(text);
 
     var button = document.createElement('a');
-    button.className = 'waves-effect waves-light btn-small right red';
+    button.className = 'waves-effect waves-light btn-small red';
     button.setAttribute('onclick', 'confirmar_exclusao(' + index + ' )');
     button.innerHTML = 'excluir';
     col.appendChild(button);
 
     var form = document.createElement('div');
-    form.className = 'collapsible-body white row';
+    form.className = 'collapsible-body white';
     row.appendChild(form);
 
     var span = document.createElement('span');

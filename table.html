@@ -39,42 +39,47 @@
 </head>
 
 <body>
+  <form action="destino.php" method="post">
+    
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper purple darken-3">
+          <a href="#!" class="brand-logo center">BC</a>
+          <ul class="left ">
+            <li>
+              <a><i class="material-icons modal-trigger" id="modal-help" href="#advice">help</i></a>
+            </li>
+          </ul>
+          <ul class="right ">
+            <li>
+              <!-- <a class="waves-effect waves-light btn purple" href="index.html">Enviar</a> -->
+              <!-- <input class="waves-effect waves-light btn-large purple right" type="submit" value="Enviar"> -->
+              <input  type="submit" value="Enviar">
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper purple darken-3">
-        <a href="#!" class="brand-logo center">BC</a>
-        <ul class="left ">
-          <li>
-            <a><i class="material-icons modal-trigger" id="modal-help" href="#advice">help</i></a>
-          </li>
-        </ul>
-        <ul class="right ">
-          <li>
-            <a class="waves-effect waves-light btn purple" href="index.html">Enviar</a>
-          </li>
-        </ul>
+    <!-- Modal Structure -->
+    <div id="advice" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4 class="center">Formulário de Doação de Material Bibliográfico</h4>
+        <p class="justify">Preencha o formulário a seguir para submeter os títulos que você deseja doar para a
+          biblioteca.
+          É importante
+          que todos os dados informados estejam corretos, bem como a impressão e entrega do termo de doação assinada,
+          disponível neste link.</p>
+        <p>Para começar, click no botão "+" para adicionar um livro à lista.</p>
       </div>
-    </nav>
-  </div>
-
-  <!-- Modal Structure -->
-  <div id="advice" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4 class="center">Formulário de Doação de Material Bibliográfico</h4>
-      <p class="justify">Preencha o formulário a seguir para submeter os títulos que você deseja doar para a biblioteca.
-        É importante
-        que todos os dados informados estejam corretos, bem como a impressão e entrega do termo de doação assinada,
-        disponível neste link.</p>
-      <p>Para começar, click no botão "+" para adicionar um livro à lista.</p>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">OK</a>
-    </div>
-  </div>
 
 
-  <ul id="formulario" class="collapsible popout"></ul>
+    <ul id="formulario" class="collapsible popout"></ul>
+  </form>
 
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large pulse waves-effect waves-light blue darken-4" onclick="
@@ -85,7 +90,6 @@
       <i class="material-icons">add</i>
     </a>
   </div>
-
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>

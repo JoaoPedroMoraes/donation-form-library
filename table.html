@@ -15,8 +15,7 @@
 
   <script type="text/javascript" src="js/custom.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
   <script>
 
@@ -32,6 +31,7 @@
     $(document).ready(function () {
       $('.tooltipped').tooltip();
     });
+
   </script>
 
   <title>Doação BC</title>
@@ -40,11 +40,10 @@
 
 <body>
   <form action="destino.php" method="post">
-    
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper purple darken-3">
-          <a href="#!" class="brand-logo center">BC</a>
+          <img src="midia/Logo_white.png" class="logo-small-small brand-logo center">
           <ul class="left ">
             <li>
               <a><i class="material-icons modal-trigger" id="modal-help" href="#advice">help</i></a>
@@ -52,19 +51,18 @@
           </ul>
           <ul class="right ">
             <li>
-              <!-- <a class="waves-effect waves-light btn purple" href="index.html">Enviar</a> -->
-              <!-- <input class="waves-effect waves-light btn-large purple right" type="submit" value="Enviar"> -->
-              <input  type="submit" value="Enviar">
+              <a class="waves-effect waves-light btn purple modal-trigger" id="modal-help"
+                href="#advice_send">enviar</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
 
-    <!-- Modal Structure -->
+    <!-- Modal Structure aviso inicial-->
     <div id="advice" class="modal modal-fixed-footer">
       <div class="modal-content">
-        <h4 class="center">Formulário de Doação de Material Bibliográfico</h4>
+        <h4 class="center">Doação de Material Bibliográfico</h4>
         <p class="justify">Preencha o formulário a seguir para submeter os títulos que você deseja doar para a
           biblioteca.
           É importante
@@ -77,8 +75,20 @@
       </div>
     </div>
 
+    <!-- Modal Structure aviso de envio-->
+    <div id="advice_send" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4 class="center">AVISO!</h4>
+        <p class="justify">Você tem certeza que quer enviar?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        <button class="waves-effect waves-light btn green" type="submit">SIM</button>
+      </div>
+    </div>
 
     <ul id="formulario" class="collapsible popout"></ul>
+
   </form>
 
   <div class="fixed-action-btn">

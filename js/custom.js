@@ -7,14 +7,14 @@ function confirmar_exclusao(index) {
 
 function rmChild(index) {
     var a = document.getElementById('formulario');
-    var b = document.getElementById('form-' + index);
+    var b = document.getElementById(`form-${index}`);
     a.removeChild(b);
     M.toast({ html: "Item removido!" });
 }
 
 function formFields(index, size, icon_name, id, mark, example_text) {//size,icon_name, id, label, example_text
     var field = document.createElement('div');
-    field.className = "input-field col " + size; //size
+    field.className = `input-field col ${size}`; //size
 
     var icon = document.createElement('i');
     icon.className = 'material-icons prefix';
@@ -25,7 +25,7 @@ function formFields(index, size, icon_name, id, mark, example_text) {//size,icon
     input.id = id + index; //id
     input.type = 'text';
     input.className = 'validate';
-    input.setAttribute('name', id + '-'+index);
+    input.setAttribute('name',`${id}-${index}`);
     field.appendChild(input);
 
     var label = document.createElement('label');
@@ -45,7 +45,7 @@ function formFields(index, size, icon_name, id, mark, example_text) {//size,icon
 
 function addForm(index) {
     var row = document.createElement('li');
-    row.id = 'form-' + index;
+    row.id = `form-${index}`;
     document.getElementById('formulario').appendChild(row);
 
     var col = document.createElement('div');
@@ -59,14 +59,12 @@ function addForm(index) {
 
     var text = document.createElement('a');
     text.className = 'btn-flat';
-    text.innerHTML = 'Titulo ' + index;
+    text.innerHTML = `Titulo ${index}`;
     col.appendChild(text);
 
     var button = document.createElement('a');
     button.className = 'waves-effect waves-light btn-small red';
-    button.setAttribute('onclick', 'confirmar_exclusao('+ index + ')');
-    // button.className = 'modal-trigger waves-effect waves-light btn-small red';
-    // button.href = '#modal'+index;
+    button.setAttribute('onclick', `confirmar_exclusao(${index})`);
     button.innerHTML = 'excluir';
     col.appendChild(button);
 
@@ -84,35 +82,6 @@ function addForm(index) {
     span.appendChild(formFields(index, 's6 m3 xl1', 'date_range', 'ano', 'Ano', 'ex: 1945'));
     span.appendChild(formFields(index, 's12 m6 xl2', 'domain', 'editora', 'Editora', 'ex: Editora Cultura'));
     span.appendChild(formFields(index, 's12 m12 xl2', 'place', 'local', 'Local', 'ex: Brasil'));
-
-    // MODAL DE EXCLUSSÃO
-
-    // var modal = document.createElement('div');
-    // modal.className = 'modal bottom-sheet';
-    // modal.id = 'modal'+index;
-    // document.getElementById('footerQg').appendChild(modal);
-
-    // var modalContent = document.createElement('div');
-    // modalContent.className = 'modal-content';
-    // modalContent.innerHTML = 'Vc tem certeza?';
-    // modal.appendChild(modalContent);
-
-    // var modalFooter = document.createElement('div');
-    // modalFooter.className = 'modal-footer';
-    // modal.appendChild(modalFooter);
-
-    // var btnCancel = document.createElement('a');
-    // btnCancel.href = '#!';
-    // btnCancel.className = 'modal-close waves-effect waves-green btn-flat';
-    // btnCancel.innerHTML = 'cancela';
-    // modalFooter.appendChild(btnCancel);
-
-    // var btnOk = document.createElement('a');
-    // btnOk.href = '#!'
-    // btnOk.className = 'waves-effect waves-green btn-flat';
-    // btnOk.setAttribute('onclick','rmChild'+index);
-    // btnOk.innerHTML = 'OK';
-    // modalFooter.appendChild(btnOk);
 }
 
 var count = 1;

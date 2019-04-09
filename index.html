@@ -13,9 +13,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
   <script>
     $(document).ready(function () {
@@ -29,24 +27,23 @@
 </head>
 
 <body>
-
   <div class="row">
     <div class="col s12 m8 offset-m2">
       <div class="card-panel">
         <img src="midia/logo-bc.png" class="logo-small">
         <a class="right "><i class="material-icons modal-trigger small" id="modal-help" href="#beacon">info</i></a>
         <div class="row">
-          <form class="col s12">
+          <form class="col s12" action="table.php" method="post">
             <div class="row">
               <div class="input-field col s12 l6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="first_name" type="text" class="validate">
+                <input id="first_name" type="text" class="validate" name="first_name">
                 <label for="first_name">Nome Completo</label>
                 <span class="helper-text" data-error="Errouuuu" data-success="Acertô Miseravi">ex: Walter Branco</span>
               </div>
               <div class="input-field col s12 l6">
                 <i class="material-icons prefix">assignment_ind</i>
-                <input id="cpf" type="text" class="validate" pattern="[0-9]{11}">
+                <input id="cpf" type="text" class="validate" name="cpf" pattern="[0-9]{11}">
                 <label for="cpf">CPF</label>
                 <span class="helper-text" data-error="Errou" data-success="Acertô Miseravi">ex:
                   123.456.789-00</span>
@@ -55,7 +52,7 @@
             <div class="row">
               <div class="input-field col s12 l12">
                 <i class="material-icons prefix">email</i>
-                <input id="email" type="email" class="validate">
+                <input id="email" type="email" class="validate" name="email">
                 <label for="email">Email</label>
                 <span class="helper-text" data-error="Errouuuu" data-success="Acertô Miseravi">ex:
                   walter.branco@irmaosfrango.com</span>
@@ -64,6 +61,10 @@
             <a class="waves-effect waves-light btn-large" href="table.html">Próximo
               <i class="material-icons right">navigate_next</i>
             </a>
+<!-- 
+            <button class="waves-effect waves-light btn-large" type="submit">Próximo
+                <i class="material-icons right">navigate_next</i>
+            </button > -->
           </form>
         </div>
       </div>

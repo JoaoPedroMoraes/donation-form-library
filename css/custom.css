@@ -24,3 +24,9 @@ img.logo-small{
     margin-left: -40px; 
     left: 50%;
 }
+
+img.logo-small-small{
+  width:55px;
+  height:55px;
+  padding: 5px;
+}

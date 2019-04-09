@@ -72,7 +72,8 @@ function addForm(index) {
     form.className = 'collapsible-body white';
     row.appendChild(form);
 
-    var span = document.createElement('span');
+    var span = document.createElement('div');
+    span.className = 'row';
     form.appendChild(span);
 
     span.appendChild(formFields(index, 's6 m3 xl1', 'plus_one', 'quantidade', 'Quantidade', 'ex. 1'));

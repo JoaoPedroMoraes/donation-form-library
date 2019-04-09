@@ -84,4 +84,12 @@ function addForm(index) {
     span.appendChild(formFields(index, 's12 m12 xl2', 'place', 'local', 'Local', 'ex: Brasil'));
 }
 
+function nextPage(currentPage,nextPage){
+    let x = document.getElementById(currentPage);
+    x.className = 'hide';
+
+    let y = document.getElementById(nextPage);
+    y.className = '';
+}
+
 var count = 1;

@@ -83,6 +83,7 @@ function addForm(index) {
     span.appendChild(formFields(index, 's6 m3 xl1', 'date_range', 'ano', 'Ano', 'ex: 1945'));
     span.appendChild(formFields(index, 's12 m6 xl2', 'domain', 'editora', 'Editora', 'ex: Editora Cultura'));
     span.appendChild(formFields(index, 's12 m12 xl2', 'place', 'local', 'Local', 'ex: Brasil'));
+
 }
 
 function nextPage(currentPage,nextPage){

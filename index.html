@@ -20,7 +20,8 @@
   <script>
     $(document).ready(function () {
       $('.modal').modal();
-      $('#modal-help').trigger('click');
+      $('#modal-help-01').trigger('click');
+      $('#modal-help-02').trigger('click');
     });
 
     $(document).ready(function () {
@@ -46,14 +47,14 @@
         <div class="col s12 m8 offset-m2">
           <div class="card-panel">
             <img src="midia/logo-bc.png" class="logo-small">
-            <a class="right "><i class="material-icons modal-trigger small" id="modal-help" href="#beacon">info</i></a>
+            <a class="right "><i class="material-icons modal-trigger small" id="modal-help-01" href="#beacon">info</i></a>
             <div class="row">
               <div class="col s12">
                 <div class="row">
                   <div class="input-field col s12 l6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="first_name" type="text" class="validate" name="first_name">
-                    <label for="first_name">Nome Completo</label>
+                    <input id="full_name" type="text" class="validate" name="full_name">
+                    <label for="full_name">Nome Completo</label>
                     <span class="helper-text" data-error="Errouuuu" data-success="Acertô Miseravi">ex: Walter
                       Branco</span>
                   </div>
@@ -105,7 +106,7 @@
             <img src="midia/Logo_white.png" class="logo-small-small brand-logo center">
             <ul class="left ">
               <li>
-                <a><i class="material-icons modal-trigger" id="modal-help" href="#advice">help</i></a>
+                <a><i class="material-icons modal-trigger" id="modal-help-02" href="#advice">help</i></a>
               </li>
             </ul>
             <ul class="right ">
